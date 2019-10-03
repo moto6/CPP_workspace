@@ -35,12 +35,24 @@ void Car::void InitMember(char * ID, int fuel)
 
 void Car::void ShowCarState()
 {
-
+  cout<<"Master ID  : "<<gamerID<<endl;
+  cout<<"FULE Level : "<<fuleGauge<<"%"<<endl;
+  cout<<"Cur SPEED  : "<<curSpeed<<"km/h"<<endl;
 }
 
 void Car::void Accel()
 {
+  if(fuleGauge<=0) {
+    return 
+  }
+  else{
+    fuelGauge-=CAR_CONST::FUEL_STEP;
+  }
 
+  if((curSpeed+CAR_CONST::ACC_STEP)>=CAR_CONST::MAX_SPD)
+  {
+    
+  }
 }
 void Car::void Break()
 {
